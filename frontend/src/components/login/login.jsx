@@ -1,6 +1,14 @@
 import { Button } from "@mui/material";
+import React from "react";
 
 const Login = () => {
+  const [password, setPassword] = React.useState("");
+  const [username, setUsername] = React.useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    alert(`Usuario: ${username}\nContraseña: ${password}`);
+  };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50  p-6 bg-blue-950">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
@@ -16,6 +24,9 @@ const Login = () => {
               Usuario
             </label>
             <input
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
               type="text"
               className="mt-1 block w-full rounded-lg border border-gray-200 px-3 py-2 text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             />
@@ -26,6 +37,9 @@ const Login = () => {
               Contraseña
             </label>
             <input
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
               type="password"
               className="mt-1 block w-full rounded-lg border border-gray-200 px-3 py-2 text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             />
@@ -44,7 +58,12 @@ const Login = () => {
             </a>
           </div>
 
-          <Button variant="contained" color="primary" fullWidth>
+          <Button
+            variant="contained"
+            color="primary"
+            fullWidth
+            onClick={handleLogin}
+          >
             Iniciar sesión
           </Button>
         </form>
