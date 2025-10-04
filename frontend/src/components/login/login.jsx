@@ -1,6 +1,8 @@
+import { Button } from "@mui/material";
+
 const Login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-sky-50 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50  p-6 bg-blue-950">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
           Bienvenido
@@ -42,9 +44,9 @@ const Login = () => {
             </a>
           </div>
 
-          <button className="w-full inline-flex items-center justify-center rounded-lg bg-indigo-600 px-4 py-2 text-white font-medium hover:bg-indigo-700 shadow-md">
+          <Button variant="contained" color="primary" fullWidth>
             Iniciar sesión
-          </button>
+          </Button>
         </form>
         <p className="mt-6 text-center text-sm text-gray-500">
           ¿No tienes cuenta?{" "}
