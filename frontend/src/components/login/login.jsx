@@ -12,7 +12,6 @@ const Login = () => {
 
     const data = { username, password };
 
-
     try {
       console.log("3. Haciendo fetch...");
 
